@@ -1,0 +1,24 @@
+# permissions for end users to edit kubeshores.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: kubeshore-editor-role
+rules:
+- apiGroups:
+  - stream.gostrim.org
+  resources:
+  - kubeshores
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - stream.gostrim.org
+  resources:
+  - kubeshores/status
+  verbs:
+  - get

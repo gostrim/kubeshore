@@ -1,0 +1,7 @@
+domain: gostrim.org
+repo: kubeshore
+resources:
+- group: stream
+  kind: Kubeshore
+  version: v1alpha1
+version: "2"

@@ -1,0 +1,20 @@
+# permissions for end users to view kubeshores.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: kubeshore-viewer-role
+rules:
+- apiGroups:
+  - stream.gostrim.org
+  resources:
+  - kubeshores
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - stream.gostrim.org
+  resources:
+  - kubeshores/status
+  verbs:
+  - get
