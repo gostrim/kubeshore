@@ -1,0 +1,2 @@
+# kubeshore
+Kafka operator
